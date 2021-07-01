@@ -5,7 +5,8 @@
   	"oh-my-zsh-plugins" : ["zsh-autosuggest", "zsh-syntax-highlighting"]
   },
   "bash" : {
-  	"library": "tests/shell-integration-not-installed"
+  	"library": "tests/shell-integration-not-installed",
+  	"prompt" : "none"
   },
   
   "fish" : {
