@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Rerun script when this changes: {{ (eq .zsh.prompt "p10k") }}
+
+{{ if (eq "starship" .zsh.prompt .fish.prompt .bash.prompt) }} 
+brew install starship
+{{ else }}
+brew uninstall starship
+{{ end }}

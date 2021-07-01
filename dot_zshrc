@@ -1,0 +1,7 @@
+{{ if (eq .zsh.prompt "p10k") }}
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+{{ else if (eq .zsh.prompt "starship" ) }}
+eval "$(starship init zsh)"
+{{ else if (eq .zsh.prompt "omz" ) }}
+
+{{ end }}
