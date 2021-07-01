@@ -1,0 +1,25 @@
+{
+  "loginshell": "/bin/zsh",
+  "zsh" : {
+  	"prompt" : "p10k",
+  	"oh-my-zsh-plugins" : ["zsh-autosuggest", "zsh-syntax-highlighting"]
+  },
+  "bash" : {
+  	"library": "tests/shell-integration-not-installed"
+  },
+  
+  "fish" : {
+   	"prompt" : "starship"
+  },
+  
+  "tmux" : {
+  	"library": "users/rickybobby123"
+  },
+  
+  "terminals" : {
+  		"iterm" : "beta",
+  		"vscode" : "main",
+  		"vscode-insiders" : "not-installed",
+  		"hyper" : "canary"
+  }
+}
