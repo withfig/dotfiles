@@ -1,5 +1,6 @@
-
-
+{{ if .zsh.library }}
+{{ include .zsh.library }}
+{{else}}
 {{ if (eq .zsh.prompt "p10k") }}
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -32,4 +33,4 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 {{ else if (eq .zsh.prompt "starship" ) }}
 eval "$(starship init zsh)"
 {{ end }}
-
+{{end}}

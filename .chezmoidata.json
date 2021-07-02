@@ -24,9 +24,19 @@
   },
   
   "terminals" : {
-  		"iterm" : "beta",
-  		"vscode" : "main",
-  		"vscode-insiders" : "not-installed",
-  		"hyper" : "canary"
+  		"iterm" : {
+        "installed" : true,
+        "build" : "beta"
+      },
+  		"vscode" : {
+        "installed" : true,
+      },
+  		"vscode-insiders" : {
+        "installed" : false
+      },
+  		"hyper" : {
+        "installed" : true,
+        "build" : "canary"
+      }
   }
 }
