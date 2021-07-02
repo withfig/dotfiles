@@ -1,0 +1,21 @@
+#!/bin/bash
+case $0 in
+
+  /bin/bash)
+    RC="${HOME}/.bashrc"
+    ;;
+
+  /bin/zsh)
+    RC="${HOME}/.zshrc"
+    ;;
+
+  /usr/local/bin/fish)
+    RC="${HOME}/.config/fish/config.fish"
+    ;;
+
+  *)
+    echo Unknown shell
+    exit 1
+    ;;
+esac
+chezmoi apply && source $RC

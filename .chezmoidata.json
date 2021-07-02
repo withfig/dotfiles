@@ -26,8 +26,6 @@
   },
   
   "terminals" : {
-      "deleteDataOnApply" : false,
-
   		"iterm" : {
         "installed" : true,
         "build" : "beta"
@@ -35,12 +33,16 @@
   		"vscode" : {
         "installed" : true
       },
-  		"vscode-insiders" : {
+  		"vscodeinsiders" : {
         "installed" : false
       },
   		"hyper" : {
         "installed" : true,
         "build" : "canary"
       }
+  },
+  "dangerous" : {
+      "deleteDataOnApply" : false,
+      "comment" : "setting 'deleteDataOnApply' will delete preferences data for terminals"
   }
 }

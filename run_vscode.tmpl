@@ -1,0 +1,19 @@
+#!/bin/bash
+
+{{ if .dangerous.deleteDataOnApply }}
+rm -rf ~/Library/Application\ Support/Code/
+{{ end }}
+
+# VSCode
+{{ if .terminals.vscode.installed }}
+brew install visual-studios-code
+{{ else }}
+brew uninstall visual-studios-code
+{{ end }}
+
+# VSCode Insiders
+{{ if .terminals.vscodeinsiders.installed }}
+brew install visual-studios-code-insiders
+{{ else }}
+brew uninstall visual-studios-code-insiders
+{{ end }}

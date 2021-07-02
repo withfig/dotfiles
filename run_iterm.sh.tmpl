@@ -1,21 +1,24 @@
 #!/bin/bash
 
 # remove all iTerm files, folders, preferences and defaults
-{{ if .terminals.deleteDataOnApply }}
+{{ if .dangerous.deleteDataOnApply }}
 defaults delete com.googlecode.iterm2
 rm -rf ~/Library/Application\ Support/iTerm2
 unlink ~/Library/ApplicationSupport
 {{ end }}
-# if main, brew install iterm2
 
 {{ if (eq .terminals.iterm.build "beta")}}
-brew uninstall iterm2 iterm2-nightly
+brew uninstall iterm2
+brew uninstall iterm2-nightly
 brew install iterm2-beta
+{{ else if (eq .terminals.iterm.build "nightly") }}
 # if nightly, brew install iterm2-nightly
-{{ else if (eq .terminals.iterm.build "beta") }}
-brew uninstall iterm2 iterm2-beta
+brew uninstall iterm2
+brew uninstall iterm2-beta
 brew install iterm2-nightly
 {{ else }}
-brew uninstall iterm2-nightly iterm2-beta
+# if not beta or nightly, brew install iterm2
+brew uninstall iterm2-nightly
+brew uninstall iterm2-beta
 brew install iterm2
 {{ end }}
