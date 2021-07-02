@@ -1,9 +1,0 @@
-#!/bin/bash
-
-# Rerun script when this changes: {{ (eq .zsh.prompt "p10k") }}
-
-{{ if (eq .zsh.prompt "p10k") }} 
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-{{ else }}
-rm -rf ~/powerlevel10k
-{{ end }}
