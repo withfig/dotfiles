@@ -11,11 +11,12 @@
   	}
   },
   "bash" : {
-  	"library": "tests/shell-integration-not-installed",
+    "library" : null,
   	"prompt" : "none"
   },
   
   "fish" : {
+    "library" : null,
    	"prompt" : "starship"
   },
   
@@ -24,6 +25,8 @@
   },
   
   "terminals" : {
+      "deleteDataOnApply" : false,
+
   		"iterm" : {
         "installed" : true,
         "build" : "beta"
