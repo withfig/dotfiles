@@ -1,0 +1,3 @@
+#!/bin/bash
+
+[ "{{ .loginshell  }}" = "$(dscl . -read ~/ UserShell | sed 's/UserShell: //')" ] || chsh -s {{ .loginshell  }}
