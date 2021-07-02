@@ -11,9 +11,9 @@ fi
 export ZSH="{{.chezmoi.homedir}}/.oh-my-zsh"
 plugins=(
 {{- if (.zsh.omz.plugins.autosuggest )}}
-zsh-autosuggest
-{{end -}}
-{{- if (.zsh.omz.plugins.syntaxhighlighting )}}
+zsh-autosuggestions
+{{- end -}}
+{{- if (.zsh.omz.plugins.syntaxhighlighting ) -}}
 zsh-syntax-highlighting
 {{end -}}
 )
