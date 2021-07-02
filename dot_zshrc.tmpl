@@ -12,10 +12,10 @@ export ZSH="{{.chezmoi.homedir}}/.oh-my-zsh"
 plugins=(
 {{- if (.zsh.omz.plugins.autosuggest )}}
 zsh-autosuggest
-{{end-}}
+{{end -}}
 {{- if (.zsh.omz.plugins.syntaxhighlighting )}}
 zsh-syntax-highlighting
-{{end-}}
+{{end -}}
 )
 source $ZSH/oh-my-zsh.sh
 {{ end }}
