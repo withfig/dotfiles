@@ -6,14 +6,14 @@ rm -rf ~/Library/Application\ Support/Code/
 
 # VSCode
 {{ if .terminals.vscode.installed }}
-brew install visual-studios-code
+brew install visual-studio-code
 {{ else }}
-brew uninstall visual-studios-code
+brew uninstall visual-studio-code
 {{ end }}
 
 # VSCode Insiders
 {{ if .terminals.vscodeinsiders.installed }}
-brew install visual-studios-code-insiders
+brew install visual-studio-code-insiders
 {{ else }}
-brew uninstall visual-studios-code-insiders
+brew uninstall visual-studio-code-insiders
 {{ end }}
