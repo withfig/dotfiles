@@ -4,8 +4,8 @@
   	"prompt" : "p10k",
   	"omz" : {
   		"plugins" : {
-  			"zsh-autosuggest" : true,
-  			"zsh-syntax-highlighting": true
+  			"autosuggest" : true,
+  			"syntaxhighlighting": true
   		},
   		"active" : true
   	}

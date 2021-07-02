@@ -2,10 +2,10 @@
 {{ if (.zsh.omz.active) }}
 export ZSH="{{.chezmoi.homedir}}/.oh-my-zsh"
 plugins=(
-{{ if (.zsh.omz.plugins.zsh-autosuggest )}}
+{{ if (.zsh.omz.plugins.autosuggest )}}
 zsh-autosuggest
 {{end}}
-{{ if (.zsh.omz.plugins.zsh-syntax-highlighting )}}
+{{ if (.zsh.omz.plugins.syntaxhighlighting )}}
 zsh-syntax-highlighting
 {{end}}
 )
