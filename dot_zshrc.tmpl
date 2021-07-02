@@ -1,15 +1,12 @@
 
 {{ if (.zsh.omz.active) }}
-export ZSH="{{chezmoi.homedir}}/.oh-my-zsh"
+export ZSH="{{.chezmoi.homedir}}/.oh-my-zsh"
 plugins=(
 {{ if (.zsh.omz.plugins.zsh-autosuggest )}}
-
+zsh-autosuggest
 {{end}}
 {{ if (.zsh.omz.plugins.zsh-syntax-highlighting )}}
-
-{{end}}
-{{ if (.zsh.omz.plugins.zsh-autosuggest )}}
-
+zsh-syntax-highlighting
 {{end}}
 )
 source $ZSH/oh-my-zsh.sh
