@@ -1,13 +1,21 @@
 
+
+{{ if (eq .zsh.prompt "p10k") }}
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+{{end}}
+
 {{ if (.zsh.omz.active) }}
 export ZSH="{{.chezmoi.homedir}}/.oh-my-zsh"
 plugins=(
-{{ if (.zsh.omz.plugins.autosuggest )}}
+{{- if (.zsh.omz.plugins.autosuggest )}}
 zsh-autosuggest
-{{end}}
-{{ if (.zsh.omz.plugins.syntaxhighlighting )}}
+{{end-}}
+{{- if (.zsh.omz.plugins.syntaxhighlighting )}}
 zsh-syntax-highlighting
-{{end}}
+{{end-}}
 )
 source $ZSH/oh-my-zsh.sh
 {{ end }}
@@ -15,6 +23,8 @@ source $ZSH/oh-my-zsh.sh
 
 {{ if (eq .zsh.prompt "p10k") }}
 source ~/powerlevel10k/powerlevel10k.zsh-theme
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 {{ else if (eq .zsh.prompt "starship" ) }}
 eval "$(starship init zsh)"
 {{ end }}
