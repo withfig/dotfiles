@@ -1,5 +1,5 @@
-{{ if .fish.library }}
-{{ include .fish.library }}
+{{ with .fish.library }}
+{{ include . }}
 {{else}}
 {{ if (eq .fish.prompt "starship") }}
 starship init fish | source
