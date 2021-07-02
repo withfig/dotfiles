@@ -1,5 +1,5 @@
 {{ with .zsh.library }}
-{{ include (printf "library/%s".) }}
+{{ include (printf "library/%s" .) }}
 {{else}}
 {{ if (eq .zsh.prompt "p10k") }}
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.

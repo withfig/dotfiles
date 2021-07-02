@@ -1,6 +1,7 @@
 {
   "loginshell": "/bin/zsh",
   "zsh" : {
+    "library" : null,
   	"prompt" : "p10k",
   	"omz" : {
   		"plugins" : {
