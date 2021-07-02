@@ -1,7 +1,24 @@
+
+{{ if (.zsh.omz.active) }}
+export ZSH="{{chezmoi.homedir}}/.oh-my-zsh"
+plugins=(
+{{ if (.zsh.omz.plugins.zsh-autosuggest )}}
+
+{{end}}
+{{ if (.zsh.omz.plugins.zsh-syntax-highlighting )}}
+
+{{end}}
+{{ if (.zsh.omz.plugins.zsh-autosuggest )}}
+
+{{end}}
+)
+source $ZSH/oh-my-zsh.sh
+{{ end }}
+
+
 {{ if (eq .zsh.prompt "p10k") }}
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 {{ else if (eq .zsh.prompt "starship" ) }}
 eval "$(starship init zsh)"
-{{ else if (eq .zsh.prompt "omz" ) }}
-
 {{ end }}
+

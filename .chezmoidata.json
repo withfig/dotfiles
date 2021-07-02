@@ -2,7 +2,13 @@
   "loginshell": "/bin/zsh",
   "zsh" : {
   	"prompt" : "p10k",
-  	"oh-my-zsh-plugins" : ["zsh-autosuggest", "zsh-syntax-highlighting"]
+  	"omz" : {
+  		"plugins" : {
+  			"zsh-autosuggest" : true,
+  			"zsh-syntax-highlighting": true
+  		},
+  		"active" : true
+  	}
   },
   "bash" : {
   	"library": "tests/shell-integration-not-installed",
