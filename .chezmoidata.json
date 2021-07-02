@@ -32,7 +32,7 @@
         "build" : "beta"
       },
   		"vscode" : {
-        "installed" : true,
+        "installed" : true
       },
   		"vscode-insiders" : {
         "installed" : false

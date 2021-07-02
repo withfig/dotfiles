@@ -1,5 +1,5 @@
 {{ with .bash.library }}
-{{ include (printf "library/%s".) }}
+{{ include (printf "library/%s" .) }}
 {{else}}
 {{ if (eq .bash.prompt "starship") }}
 eval "$(starship init bash)"
