@@ -17,6 +17,10 @@ zsh-autosuggestions
 zsh-syntax-highlighting
 {{end -}}
 )
+
+{{ if (eq .zsh.prompt "bullet-train") }}
+ZSH_THEME="bullet-train"
+{{ end -}}
 source $ZSH/oh-my-zsh.sh
 {{ end }}
 
