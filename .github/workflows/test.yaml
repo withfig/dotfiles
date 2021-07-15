@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  the-name-of-the-job:
+  testjob:
   	# Allow a way to opt out of running the GH action
   	# if you include [skip ci] in your commit message,
     # the action will not run
