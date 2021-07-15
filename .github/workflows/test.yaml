@@ -1,0 +1,25 @@
+name: Test action
+
+on:
+  # this lets you manually trigger the action
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  the-name-of-the-job:
+  	# Allow a way to opt out of running the GH action
+  	# if you include [skip ci] in your commit message,
+    # the action will not run
+    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    # choose the OS (macOS is most expensive, use ubuntu if possible)
+    runs-on: ubuntu-latest
+    # prevent the action from wasting too much time by setting a cap!
+    timeout-minutes: 30
+    steps:
+      # checkout the current project
+      - name: "Checkout Project"
+        uses: actions/checkout@v2
+      
+      - name: "Printing something"
+        run: "echo hi"
